@@ -2,10 +2,18 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  list-style: none;
+}
+
+:root {
+  --small-font-size: 13px;
+  --medium-font-size: 16px;
+  --big-font-size: 20px;
 }
 
 body {
   font-family: Lato;
+  color: #F5F6F8;
 }
 
 a {
@@ -31,4 +39,23 @@ a {
 /* Estilizações minhas */
 .mini-icons {
   width: 1.5rem;
+}
+
+.big-font {
+  font-size: var(--big-font-size);
+  font-weight: 700;
+}
+
+.medium-font {
+  font-size: var(--medium-font-size);
+  font-weight: 400;
+}
+
+.small-font {
+  font-size: var(--small-font-size);
+  font-weight: 400;
+}
+
+.radius-default {
+  border-radius: 15px;
 }

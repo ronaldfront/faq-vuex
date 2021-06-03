@@ -4,7 +4,7 @@ import { faqCategories } from '../utils/db.json'
 export default createStore({
   state: {
     faqCategories: [],
-    singleCategory: {},
+    singleCategory: faqCategories.singleCategory,
     singleQuestion: {},
     currentComponent: 'FaqCategories',
     transitionDepth: 1
@@ -56,11 +56,11 @@ export default createStore({
       commit('SET_SINGLE_QUESTION', singleQuestion)
     },
 
-    nextComponent({commit}) {
+    nextComponent({ commit }) {
       commit('SET_NEXT_TRANSITION_DEPTH')
     },
 
-    returnComponent({commit}) {
+    returnComponent({ commit }) {
       commit('SET_RETURN_TRANSITION_DEPTH')
     }
   },
@@ -75,6 +75,10 @@ export default createStore({
 
     $currentComponent(state) {
       return state.currentComponent
+    },
+
+    $transitionDepth(state) {
+      return state.transitionDepth
     }
   }
 })
