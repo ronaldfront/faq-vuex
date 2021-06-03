@@ -1,5 +1,5 @@
 <template>
-  <section class="container radius-default">
+  <section class="container">
     <img
       class="astronaut"
       src="../assets/images/astronaut.svg"
@@ -9,7 +9,6 @@
       <h2 class="big-font">Perguntas frequentes</h2>
       <small class="small-font">Escolha a categoria desejada</small>
     </div>
-    <!--../assets/images/rocket.svg -->
     <ul>
       <li
         @click="toggleComponent(faqCategorie)"
@@ -32,7 +31,7 @@ export default {
   created() {
     const component = 'FaqCategories'
     this.$store.dispatch('fetchData')
-    this.$store.dispatch('fetchCurrentComponent', component)
+    this.$store.dispatch('getCurrentComponent', component)
   },
 
   computed: {
@@ -47,8 +46,9 @@ export default {
     },
 
     toggleComponent(name) {
-      this.$store.dispatch('fetchCurrentComponent', name)
+      this.$store.dispatch('getSingleCategory', name)
       this.$store.dispatch('nextComponent')
+      this.$store.dispatch('getCurrentComponent', 'Categorie')
     }
   }
 }

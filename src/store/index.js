@@ -41,7 +41,7 @@ export default createStore({
       commit('FAQ_CATEGORIES', data)
     },
 
-    fetchCurrentComponent({ commit }, payload) {
+    getCurrentComponent({ commit }, payload) {
       const component = payload
       commit('SET_CURRENT_COMPONENT', component)
     },
@@ -67,6 +67,10 @@ export default createStore({
   getters: {
     $faqCategories(state) {
       return state.faqCategories
+    },
+
+    $singleCategory(state) {
+      return state.singleCategory
     },
 
     $singleQuestion(state) {

@@ -8,10 +8,12 @@
 
 <script>
 import FaqCategories from './components/FaqCategories.vue'
+import Categorie from './components/Categorie.vue'
 
 export default {
   components: {
-    FaqCategories
+    FaqCategories,
+    Categorie
   },
 
   computed: {
@@ -39,6 +41,5 @@ export default {
   margin: 1rem;
   box-shadow: 0px 10px 30px #3f445266;
   padding: 1.5rem 0.25rem 0.5rem 0.25rem;
-  
 }
 </style>
