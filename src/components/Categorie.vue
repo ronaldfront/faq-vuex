@@ -22,7 +22,7 @@
           :key="singleQuestion.id"
           @click="toggleComponent(singleQuestion)"
         >
-          {{ singleQuestion.title }}
+          <p class="medium-font">{{ singleQuestion.title }}</p>
         </li>
       </ul>
     </div>
@@ -93,8 +93,9 @@ li:hover {
 .on {
   border-bottom: 1px solid #404451;
   padding-top: 2rem;
+  margin: 0 1rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding-bottom: 1.5rem;
 }
