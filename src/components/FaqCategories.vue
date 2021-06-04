@@ -49,6 +49,7 @@ export default {
       this.$store.dispatch('getSingleCategory', name)
       this.$store.dispatch('nextComponent')
       this.$store.dispatch('getCurrentComponent', 'Categorie')
+      console.log(this.$store.getters.$transitionDepth)
     }
   }
 }
@@ -67,6 +68,7 @@ export default {
   display: flex;
   flex-direction: column;
   margin-left: 1.85rem;
+  margin-top: 0.5rem;
 }
 
 .title small {
@@ -76,7 +78,8 @@ export default {
 li {
   display: flex;
   flex: 1;
-  margin: 0 1px 3px 1px;
+  width: 270px;
+  margin: 0 0px 3px 0px;
   height: 53px;
   justify-content: left;
   align-items: center;
@@ -84,23 +87,23 @@ li {
   transition: 0.2s;
 }
 
+ul {
+  margin: 1rem 0.8rem 0.5rem 1rem;
+}
+
 li:hover {
   background: #3f4452b3 0% 0% no-repeat padding-box;
   border-radius: 5px;
 }
 
-li img,
+img,
 p {
   margin-left: 1.15rem;
-}
-
-ul {
-  margin: 0 0.3rem;
 }
 
 .astronaut {
   max-width: 242px;
   margin: 0 auto;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 </style>

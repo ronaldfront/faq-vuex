@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div class="on">
-      <div class="arrow-return">
+      <div class="arrow-return" @click="returnComponent">
         <img
           src="../assets/images/arrow-left.svg"
           alt="Return"
@@ -17,7 +17,11 @@
 
     <div class="questions">
       <ul>
-        <li v-for="singleQuestion in $singleQuestions" :key="singleQuestion.id">
+        <li
+          v-for="singleQuestion in $singleQuestions"
+          :key="singleQuestion.id"
+          @click="toggleComponent(singleQuestion)"
+        >
           {{ singleQuestion.title }}
         </li>
       </ul>
@@ -40,6 +44,18 @@ export default {
   methods: {
     getIcon(item) {
       return require(`../assets/images/${item.icon}`)
+    },
+
+    toggleComponent(question) {
+      this.$store.dispatch('getSingleQuestion', question)
+      this.$store.dispatch('nextComponent')
+      this.$store.dispatch('getCurrentComponent', 'Answer')
+    },
+
+    returnComponent() {
+      this.$store.dispatch('returnComponent')
+      this.$store.dispatch('getCurrentComponent', 'FaqCategories')
+      console.log(this.$store.getters.$transitionDepth)
     }
   }
 }
@@ -62,11 +78,11 @@ li {
   align-items: center;
   cursor: pointer;
   transition: 0.2s;
-  padding-left: 1rem;
+  padding-left: 0.7rem;
 }
 
 ul {
-  margin: 0.5rem 0.3rem;
+  margin: 0.7rem 0.8rem 0.5rem 0.9rem;
 }
 
 li:hover {
@@ -75,13 +91,12 @@ li:hover {
 }
 
 .on {
-  padding-bottom: 2rem 0 2rem 0;
   border-bottom: 1px solid #404451;
-  padding-top: 0.8rem;
+  padding-top: 2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-bottom: 1.7rem;
+  padding-bottom: 1.5rem;
 }
 
 .arrow-return:hover {
@@ -98,9 +113,10 @@ li:hover {
   border-radius: 8px;
   transition: 0.2s;
   cursor: pointer;
+  margin-left: 0.5rem;
 }
 
 .title {
-    margin-left: -1rem;
+  margin-left: -1rem;
 }
 </style>
