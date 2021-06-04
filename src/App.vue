@@ -13,30 +13,25 @@ import FaqCategories from './components/FaqCategories.vue'
 import Categorie from './components/Categorie.vue'
 import Answer from './components/Answer.vue'
 import 'animate.css'
-
 export default {
   components: {
     FaqCategories,
     Categorie,
     Answer
   },
-
   data() {
     return {
       transitionType: 'slide-left'
     }
   },
-
   computed: {
     $currentComponent() {
       return this.$store.getters.$currentComponent
     },
-
     $transitionDepth() {
       return this.$store.getters.$transitionDepth
     }
   },
-
   watch: {
     $transitionDepth(newValue, oldValue) {
       if (newValue > oldValue) {
@@ -57,7 +52,6 @@ export default {
   justify-content: center;
   align-items: center;
 }
-
 .container-component {
   width: 305px;
   height: 480px;
