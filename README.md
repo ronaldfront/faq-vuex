@@ -80,5 +80,5 @@ $ npm run dev
 
 Esse projeto está sob licença MIT. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
-[⬆ Voltar ao topo](#nome-do-projeto)<br>
+[⬆ Voltar ao topo](#faq-vuex)<br>
 
