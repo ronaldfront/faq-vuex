@@ -30,7 +30,7 @@ Para instalar o projeto, siga estas etapas:
 
 ```bash
 # Faça o download do projeto para sua máquina, pelo próprio github ou através do terminal utilizando:
-$ git clone https://github.com/roger3g/desafio-vuex.git
+$ git clone https://github.com/ronaldfront/faq-vuex
 
 # Acesse o projeto, no caso do projeto, utilizando:
 $ cd desafio-vuex
@@ -80,5 +80,5 @@ $ npm run dev
 
 Esse projeto está sob licença MIT. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
-[⬆ Voltar ao topo](#faq-vuex)<br>
+[⬆ Voltar ao topo](#)<br>
 
