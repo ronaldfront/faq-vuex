@@ -33,7 +33,7 @@ Para instalar o projeto, siga estas etapas:
 $ git clone https://github.com/ronaldfront/faq-vuex
 
 # Acesse o projeto, no caso do projeto, utilizando:
-$ cd desafio-vuex
+$ cd faq-vuex
 
 # Instale as depedências do Node.js
 $ npm install
